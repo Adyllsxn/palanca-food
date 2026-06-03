@@ -1,101 +1,96 @@
-**.NET • Node.js**
-
-<!-- Banner simplificado sem section=header -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=200&text=Full%20Stack%20Developer&fontSize=30&fontColor=00d9ff&animation=fadeIn&fontAlignY=35&desc=.NET%20%E2%80%A2%20Node.js&descSize=18&descAlignY=55" alt="Header" />
+  <img src="./docs/assets/logo.svg" alt="Chatnal Logo" width="40%" /> 
+  </br> </br>
+  
+  [![GitHub](https://img.shields.io/badge/github-chatnal-181717?style=for-the-badge&logo=github)](https://github.com/Adyllsxn/chatnal)
+  [![Demo](https://img.shields.io/badge/demo-em_breve-4c1?style=for-the-badge&logo=vercel&logoColor=white)](https://chatnal.vercel.app)
+  [![Setup](https://img.shields.io/badge/setup-guide-239120?style=for-the-badge&logo=gitbook&logoColor=white)](docs/Setup.md)
+  [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
+
 </div>
-
-
-<!-- Estatísticas do perfil -->
-<div align="left">
-  <img src="https://komarev.com/ghpvc/?username=Adyllsxn&color=00d9ff" alt="Profile views">
-  <img src="https://img.shields.io/badge/GitHub%20Grade-A%2B-00d9ff?logo=github" alt="GitHub grade">
-  <img src="https://img.shields.io/github/followers/Adyllsxn?color=00d9ff&logo=github" alt="GitHub followers">
-  <img src="https://img.shields.io/github/stars/Adyllsxn?color=00d9ff&logo=github" alt="GitHub stars">
-</div>
-
-</br>
-
-> Hi, I'm **Domingos Nascimento**.   
-> Software Engineer focused on building scalable web applications.
-> I design robust backends and APIs with **.NET** and **Node.js**, and build modern interfaces using **Next.js** and **Blazor**.
 
 ---
 
-### 🛠️ Tech Stack
+## **📖 SOBRE O PROJETO**
 
-**Languages & Markup**: 
-![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+> O **Chatnal** é uma plataforma de chat moderna que combina o melhor dos mundos: grupos públicos com sistema de aprovação e grupos privados com convites exclusivos. Inspirado no funcionamento do WhatsApp e Discord, o Chatnal oferece uma experiência completa de comunicação em tempo real.
 
-**Backend & APIs**: 
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-512BD4?logo=dotnet&logoColor=white)
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white)
+### **✨ Funcionalidades:**
+```markdown
+✅ Grupos públicos com solicitação de entrada e aprovação por admin
+✅ Grupos privados com geração de convites únicos
+✅ Chat em tempo real com WebSockets (Socket.io / SignalR)
+✅ Autenticação segura com JWT
+✅ Interface responsiva (PC, tablet e smartphone)
+✅ Sistema de mensagens com persistência
+✅ Notificações em tempo real
+✅ Histórico de conversas
+```
 
-**Frontend**:
-![Blazor](https://img.shields.io/badge/Blazor-512BD4?logo=blazor&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)
+### **🔧 Fluxo da Aplicação**
+> Usuário cria conta → Descobre grupos públicos ou é convidado → Solicita entrada ou aceita convite → Admin aprova → Chat em tempo real
 
-**Database & ORM**: 
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-0C344B?logo=prisma&logoColor=white)
-![Entity Framework](https://img.shields.io/badge/Entity_Framework-512BD4?logo=dotnet&logoColor=white)
+### **📊 Tipos de Grupo**
 
-**DevOps & Tools**: 
-![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=github-actions&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
+| Tipo | Como funciona |
+|--------|-------------|
+| **Público com aprovação** | Aparece na lista geral → Usuário pede entrada → Admin aprova → Usuário vira membro |
+| **Privado com convite** | Não aparece na lista → Admin gera convite único → Usuário entra via link → Vira membro direto |
 
 ---
 
-### 📈 GitHub Stats
+## **🛠️ TECNOLOGIAS**
 
+| Camada | Tecnologias |
+|--------|-------------|
+| **Backend** | NestJS, Node.js, Socket.io, Prisma, PostgreSQL, JWT |
+| **Frontend** | React, React Router v7, TailwindCSS, Zustand, Vite |
+| **Tempo Real** | WebSockets, Socket.io |
+| **Infra** | Docker, Git, GitHub Actions |
+
+---
+
+
+## **📸 DEMO**
 <div align="center">
-  <img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Adyllsxn&theme=transparent" alt="Stats"/>
-  
-  <picture>
-    <source
-        srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Adyllsxn&theme=tokyonight"
-        media="(prefers-color-scheme: dark)">
-    <source 
-        srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Adyllsxn&theme=github"
-        media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
-    <img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Adyllsxn&theme=transparent" />
-  </picture>
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <img src="./docs/assets/client-demo.svg" alt="Frontend FlexShoe" width="90%" />
+        <br />
+        <b>🎨 Loja (Cliente)</b>
+        <br /><br />
+        <b>🔗 Links:</b><br />
+        <a href="http://localhost:3000/">🌐 Local: http://localhost:3000/</a><br />
+        <a href="https://fl3xshoe.vercel.app">🚀 Remoto: https://fl3xshoe.vercel.app</a>
+      </td>
+      <td align="center" width="50%">
+        <img src="./docs/assets/admin-demo.svg" alt="Admin FlexShoe" width="90%" />
+        <br />
+        <b>⚙️ Painel Administrativo</b>
+        <br /><br />
+        <b>🔗 Links:</b><br />
+        <a href="http://localhost:3000/admin">🌐 Local: http://localhost:3000/admin</a><br />
+        <a href="https://fl3xshoe.vercel.app/admin">🚀 Remoto: https://fl3xshoe.vercel.app/admin</a>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---
 
-### 📊 Development Analytics
-
-<div align="center">
-  
-  <!-- Streak Stats -->
-  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=Adyllsxn&theme=github-dark-blue&hide_border=true" alt="GitHub Streak" />
-  
-  <!-- Activity Graph -->
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Adyllsxn&theme=github-dark&hide_border=true&area=true" alt="Activity Graph" width="100%" />
-  
-</div>
+## **⚠️ STATUS DO PROJETO**
+> **Nota:** Atualmente o frontend utiliza dados mockados. A integração com o backend será implementada em breve.
 
 ---
 
-### 📫 Let's Connect!
+## **📄 LICENÇA**
 
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/_adyllsxn/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/_adyllsxn/)
+> Este projeto está sob a licença MIT, o que significa que é de código aberto e pode ser utilizado livremente para fins académicos e comerciais, desde que mantidos os créditos.
 
----
 
-<!-- Footer estiloso com frase maneira -->
-<div align="center">
-  
-  ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=00d9ff&center=true&vCenter=true&width=600&lines=Building+the+future%2C+one+line+of+code+at+a+time;Code.+Create.+Conquer.;Turning+ideas+into+digital+reality;Web+%26+Mobile+Solutions+for+a+Connected+World)
-  
-</div>
-
-<!-- Rodapé animado com efeito ondulado -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=120&section=footer" alt="Footer" style="width: 100%;" />
-</p>
+```markdown
+📚 Código aberto (open source)
+✅ Livre para uso académico
+🤝 Contribuições são bem-vindas
+```
