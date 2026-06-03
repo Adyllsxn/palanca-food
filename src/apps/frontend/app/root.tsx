@@ -6,7 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
+import { Toaster } from "sonner";
 import type { Route } from "./+types/root";
 import "./app.css";
 
@@ -32,8 +32,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      {/* Mudei a classe do body para bg-black */}
+      <body className="min-h-screen bg-black font-sans antialiased">
         {children}
+        <Toaster position="top-right" richColors closeButton />
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -62,7 +64,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
+    <main className="pt-16 p-4 container mx-auto text-white">
       <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
