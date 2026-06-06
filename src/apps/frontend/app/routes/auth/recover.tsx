@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
+import { Link } from "react-router";
+import { HiOutlineArrowRight } from "react-icons/hi2";
 
 export default function Recover() {
   const [email, setEmail] = useState("");
@@ -23,16 +25,18 @@ export default function Recover() {
   };
 
   return (
-    <div className="auth-layout flex min-h-screen">
-      {/* Brand Panel - Lado esquerdo */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative">
+    <div className="auth-layout flex min-h-screen bg-black">
+      {/* Brand Panel - Lado esquerdo (preto puro) */}
+      <div className="hidden lg:flex lg:w-1/2 bg-black relative">
         <div className="flex flex-col justify-between w-full p-12">
+          {/* Logo */}
           <div>
             <a href="/" className="flex items-center gap-2 text-white">
               <img src="/logo-dark.svg" alt="Chatnal" className="h-8 w-auto" />
             </a>
           </div>
 
+          {/* Conteúdo central */}
           <div className="max-w-md mx-auto text-white">
             <h2 className="text-3xl font-bold mb-4">Reset your password</h2>
             <p className="text-blue-100 text-base mb-8">
@@ -60,65 +64,68 @@ export default function Recover() {
             </ul>
           </div>
 
+          {/* Footer do brand */}
           <div className="text-center text-blue-200 text-sm">
             © 2026 Chatnal. All Rights Reserved.
           </div>
         </div>
       </div>
 
-      {/* Form Panel - Lado direito */}
-      <div className="flex-1 flex items-center justify-center bg-gray-50 p-4">
+      {/* Form Panel - Lado direito com card escuro */}
+      <div className="flex-1 flex items-center justify-center bg-[#0a0a0a] p-4">
         <div className="w-full max-w-md">
           {/* Logo mobile */}
           <div className="lg:hidden flex justify-center mb-8">
             <img src="/logo-light.svg" alt="Chatnal" className="h-10" />
           </div>
 
-          {/* Card do formulário */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="p-6">
-              <div className="text-center mb-6">
-                <h1 className="text-2xl font-bold text-gray-900">Forgot password?</h1>
-                <p className="text-gray-500 text-sm mt-1">
-                  Enter your email to reset your password
-                </p>
+          {/* Card do formulário - Fundo preto mais claro (#111111) */}
+          <div className="bg-[#111111] rounded-2xl border border-gray-800 p-8 shadow-2xl">
+            <div className="text-center mb-8">
+              <h1 className="text-2xl font-bold text-white">Forgot password?</h1>
+              <p className="text-gray-400 text-sm mt-1">
+                Enter your email to reset your password
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Email */}
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
+                  Email address
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  className="w-full px-4 py-2.5 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-500"
+                  placeholder="name@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
               </div>
 
-              <form onSubmit={handleSubmit}>
-                {/* Email */}
-                <div className="mb-6">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email address
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                    placeholder="name@example.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                </div>
-
-                {/* Botão Send reset link */}
-                <button
-                  type="submit"
-                  className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition mb-4"
-                  disabled={isLoading}
-                >
+              {/* Botão Send reset link */}
+              <button
+                type="submit"
+                className="group relative w-full inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-blue-600 text-white overflow-hidden transition-all duration-300 hover:bg-transparent hover:text-blue-600 border-2 border-blue-600 text-base font-medium rounded-lg cursor-pointer"
+                disabled={isLoading}
+              >
+                <span className="relative z-10 flex items-center gap-2">
                   {isLoading ? "Sending..." : "Send reset link"}
-                </button>
+                  {!isLoading && <HiOutlineArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
+                </span>
+                <span className="absolute inset-0 bg-white transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></span>
+              </button>
 
-                {/* Link voltar para login */}
-                <p className="text-center text-sm text-gray-600">
-                  Remember your password?{" "}
-                  <a href="/auth/signin" className="text-indigo-600 font-medium hover:text-indigo-700">
-                    Back to sign in
-                  </a>
-                </p>
-              </form>
-            </div>
+              {/* Link voltar para login */}
+              <p className="text-center text-sm text-gray-400">
+                Remember your password?{" "}
+                <Link to="/auth/signin" className="text-blue-400 font-medium hover:text-blue-300 transition">
+                  Back to sign in
+                </Link>
+              </p>
+            </form>
           </div>
         </div>
       </div>
