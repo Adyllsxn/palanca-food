@@ -1,58 +1,24 @@
-import { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const headerRef = useRef<HTMLElement>(null);
-  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY > 10;
-      if (scrolled !== isScrolled) {
-        setIsScrolled(scrolled);
-        gsap.to(headerRef.current, {
-          duration: 0.3,
-          backgroundColor: scrolled ? "rgba(255, 255, 255, 0.95)" : "transparent",
-          backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
-          borderBottom: scrolled ? "1px solid rgba(229, 231, 235, 0.5)" : "none",
-          boxShadow: scrolled ? "0 4px 6px -1px rgba(0, 0, 0, 0.1)" : "none",
-          ease: "power2.out"
-        });
-      }
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isScrolled]);
-
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      gsap.to(mobileMenuRef.current, {
-        duration: 0.3,
-        maxHeight: "400px",
-        opacity: 1,
-        ease: "power2.out"
-      });
-    } else {
-      gsap.to(mobileMenuRef.current, {
-        duration: 0.3,
-        maxHeight: 0,
-        opacity: 0,
-        ease: "power2.in"
-      });
-    }
-  }, [isMobileMenuOpen]);
+  }, []);
 
   const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     const target = document.querySelector(targetId);
     if (target) {
-      const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-      gsap.to(window, {
-        duration: 0.8,
-        scrollTo: targetPosition - 70,
-        ease: "power3.inOut"
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
       setIsMobileMenuOpen(false);
     }
@@ -60,22 +26,20 @@ export default function Header() {
 
   return (
     <header
-      ref={headerRef}
-      className="fixed left-0 right-0 top-0 z-50 transition-all duration-500"
+      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100"
+          : "bg-transparent"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16">
         <div className="flex items-center justify-between h-full">
           {/* Logo */}
-          <a
-            href="/"
-            className="flex items-center group"
-            onMouseEnter={() => gsap.to(".logo-img", { duration: 0.3, scale: 1.05, ease: "back.out(1)" })}
-            onMouseLeave={() => gsap.to(".logo-img", { duration: 0.3, scale: 1, ease: "back.out(1)" })}
-          >
+          <a href="/" className="flex items-center group">
             <img
               src="/logo-light.svg"
               alt="Chatnal"
-              className="logo-img h-8 w-auto transition-all duration-300"
+              className="h-8 w-auto transition-transform duration-300 group-hover:scale-105"
               style={{ filter: isScrolled ? "brightness(1)" : "brightness(0) invert(1)" }}
             />
           </a>
@@ -170,9 +134,9 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
-        ref={mobileMenuRef}
-        className="md:hidden fixed top-16 left-0 right-0 bg-white shadow-xl border-b border-gray-100 overflow-hidden z-50"
-        style={{ maxHeight: 0, opacity: 0 }}
+        className={`md:hidden fixed top-16 left-0 right-0 bg-white shadow-xl border-b border-gray-100 overflow-hidden transition-all duration-300 z-50 ${
+          isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
         <div className="flex flex-col py-4 px-4 space-y-2">
           <a
