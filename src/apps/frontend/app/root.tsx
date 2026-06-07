@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import {
   isRouteErrorResponse,
   Links,
@@ -12,11 +9,6 @@ import {
 import { Toaster } from "sonner";
 import type { Route } from "./+types/root";
 import "./app.css";
-
-// Registrar o plugin do GSAP
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollToPlugin);
-}
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
