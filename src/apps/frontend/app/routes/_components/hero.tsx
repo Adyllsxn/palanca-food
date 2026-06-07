@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative bg-black min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Texto */}
+          {/* Lado Esquerdo - Texto */}
           <div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="text-white font-bold">Connect with</span>
@@ -24,9 +24,20 @@ export default function Hero() {
               {/* Botão Get Started */}
               <Link
                 to="/auth/signup"
-                className="group relative inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-blue-600 text-white overflow-hidden transition-all duration-300 hover:bg-transparent hover:text-blue-600 border-2 border-blue-600 text-base font-medium rounded-lg"
+                className="group relative inline-flex items-center justify-center gap-2 px-6 py-2.5 overflow-hidden transition-all duration-300 hover:scale-105 font-semibold rounded-lg"
+                style={{ 
+                  background: "linear-gradient(135deg, #7C5CFF 0%, #5B3DF5 100%)",
+                  boxShadow: "0 4px 15px rgba(124, 92, 255, 0.3)",
+                  color: "white"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 8px 25px rgba(124, 92, 255, 0.5)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 4px 15px rgba(124, 92, 255, 0.3)";
+                }}
               >
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative z-10 flex items-center gap-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7C5CFF] group-hover:to-[#5B3DF5]">
                   Get Started
                   <HiOutlineArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
@@ -46,7 +57,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Demo Image */}
+          {/* Lado Direito - Demo Image */}
           <div>
             <div className="rounded-xl overflow-hidden border border-gray-800 shadow-2xl">
               <img src="/demo.svg" alt="Chatnal Demo" className="w-full h-auto" />
