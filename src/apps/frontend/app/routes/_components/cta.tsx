@@ -1,46 +1,170 @@
 import { Link } from "react-router";
 import { HiOutlineArrowRight } from "react-icons/hi2";
+import { motion } from "framer-motion";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
 
 export default function CTA() {
+  const waveRef1 = useRef<SVGPathElement>(null);
+  const waveRef2 = useRef<SVGPathElement>(null);
+  const waveTopRef1 = useRef<SVGPathElement>(null);
+  const waveTopRef2 = useRef<SVGPathElement>(null);
+
+  useEffect(() => {
+    // Animação da onda bottom 1
+    if (waveRef1.current) {
+      gsap.to(waveRef1.current, {
+        duration: 3,
+        scaleY: 1.05,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        transformOrigin: "center center"
+      });
+    }
+
+    // Animação da onda bottom 2 (com delay)
+    if (waveRef2.current) {
+      gsap.to(waveRef2.current, {
+        duration: 3.5,
+        scaleY: 1.08,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        delay: 0.5,
+        transformOrigin: "center center"
+      });
+    }
+
+    // Animação da onda top 1
+    if (waveTopRef1.current) {
+      gsap.to(waveTopRef1.current, {
+        duration: 3,
+        scaleY: 1.05,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        transformOrigin: "center center"
+      });
+    }
+
+    // Animação da onda top 2 (com delay)
+    if (waveTopRef2.current) {
+      gsap.to(waveTopRef2.current, {
+        duration: 3.5,
+        scaleY: 1.08,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        delay: 0.5,
+        transformOrigin: "center center"
+      });
+    }
+  }, []);
+
   return (
-    <section className="py-24 bg-black">
-      <div className="max-w-4xl mx-auto text-center px-4">
-        <div className="relative bg-black rounded-3xl p-12 border border-gray-800 group hover:border-gray-700 transition-all duration-500 shadow-2xl">
-          
-          {/* Efeito de brilho sutil nas bordas */}
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          
-          {/* Linhas decorativas nos cantos */}
-          <div className="absolute top-0 left-0 w-16 h-16 border-t border-l border-blue-500/20 rounded-tl-3xl"></div>
-          <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-purple-500/20 rounded-tr-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-16 h-16 border-b border-l border-purple-500/20 rounded-bl-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-16 h-16 border-b border-r border-blue-500/20 rounded-br-3xl"></div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Ready to start{" "}
-            <span className="text-blue-500">
-              chatting?
-            </span>
-          </h2>
-          <p className="text-xl text-gray-500 mb-8">
-            Join thousands of users already using Chatnal
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <section className="relative py-24 bg-black overflow-hidden">
+      {/* Onda SVG no TOPO */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-0 -mt-px">
+        <svg
+          className="relative block w-full h-12 sm:h-16 md:h-20 lg:h-24"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            ref={waveTopRef1}
+            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+            fill="#1a1a1a"
+            opacity="0.8"
+          />
+          <path
+            ref={waveTopRef2}
+            d="M0,0V15.81C13,21.25,27.93,25.67,44.24,28.45c69.76,11.6,136.47,7.22,206.42-5.49C369.5,7.31,472.33,9.69,581.09,18.39c101.36,8.15,204.65,20.16,307.66,16.2C982.52,31.48,1107.22,13.84,1200,1.89V0Z"
+            fill="#1a1a1a"
+            opacity="0.5"
+          />
+        </svg>
+      </div>
+
+      {/* Onda SVG no BOTTOM */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-0 rotate-180">
+        <svg
+          className="relative block w-full h-12 sm:h-16 md:h-20 lg:h-24"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            ref={waveRef1}
+            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+            fill="#1a1a1a"
+            opacity="0.8"
+          />
+          <path
+            ref={waveRef2}
+            d="M0,0V15.81C13,21.25,27.93,25.67,44.24,28.45c69.76,11.6,136.47,7.22,206.42-5.49C369.5,7.31,472.33,9.69,581.09,18.39c101.36,8.15,204.65,20.16,307.66,16.2C982.52,31.48,1107.22,13.84,1200,1.89V0Z"
+            fill="#1a1a1a"
+            opacity="0.5"
+          />
+        </svg>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Lado Esquerdo - Botão */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center lg:justify-start"
+          >
             <Link
               to="/auth/signup"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300"
+              className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 overflow-hidden transition-all duration-300 hover:scale-105 font-semibold rounded-xl"
+              style={{ 
+                background: "linear-gradient(135deg, #7C5CFF 0%, #5B3DF5 100%)",
+                boxShadow: "0 4px 15px rgba(124, 92, 255, 0.3)",
+                color: "white"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = "0 8px 25px rgba(124, 92, 255, 0.5)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = "0 4px 15px rgba(124, 92, 255, 0.3)";
+              }}
             >
-              Create Free Account
-              <HiOutlineArrowRight className="w-5 h-5" />
+              <span className="relative z-10 flex items-center gap-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7C5CFF] group-hover:to-[#5B3DF5]" style={{ transition: "all 0.3s ease" }}>
+                <span className="text-lg">Create Free Account</span>
+                <HiOutlineArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
+              <span className="absolute inset-0 bg-white transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></span>
             </Link>
-            <Link
-              to="/auth/signin"
-              className="inline-flex items-center px-8 py-3 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-xl border border-gray-700 transition-all duration-300"
-            >
-              Sign In
-            </Link>
-          </div>
+          </motion.div>
+
+          {/* Lado Direito - Texto */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-right"
+          >
+            <div className="flex items-center justify-end gap-3 mb-4">
+              <span className="text-xs uppercase tracking-wider text-gray-500">
+                Get Started
+              </span>
+              <div className="w-12 h-0.5 bg-[#7C5CFF]/50" />
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              <span className="font-extralight text-white">Ready to start</span>
+              <br />
+              <span className="font-extrabold" style={{ color: "#7C5CFF" }}>
+                chatting?
+              </span>
+            </h2>
+            
+            <p className="text-gray-400 text-lg max-w-md ml-auto leading-relaxed">
+              Join thousands of users already using Chatnal to connect with their communities.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>
