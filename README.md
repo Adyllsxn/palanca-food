@@ -44,7 +44,7 @@
 | Camada | Tecnologias |
 |--------|-------------|
 | **Backend** | NestJS, Node.js, Socket.io, Prisma, PostgreSQL, JWT |
-| **Frontend** | React, React Router v7, TailwindCSS, Zustand, Vite |
+| **Frontend** | React, Nextjs, TailwindCSS, Zustand, Vite |
 | **Tempo Real** | WebSockets, Socket.io |
 | **Infra** | Docker, Git, GitHub Actions |
 
