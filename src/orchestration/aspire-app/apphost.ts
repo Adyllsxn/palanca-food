@@ -2,19 +2,30 @@ import { createBuilder } from './.modules/aspire.js';
 
 const builder = await createBuilder();
 
-// Run the Express API and expose its HTTP endpoint externally.
-const app = await builder
-    .addNodeApp("app", "./api", "src/index.ts")
-    .withHttpEndpoint({ env: "PORT" })
+// Backend NestJS
+const backend = builder
+    .addExecutable("backend", "npm", "../../apps/backend", ["run", "start:dev"])
+    .withEnvironment("PORT", "3001")
+    .withHttpEndpoint({ 
+        env: "PORT",
+        port: 3001,
+    })
     .withExternalHttpEndpoints();
 
-// Run the Vite frontend after the API and inject the API URL for local proxying.
-const frontend = await builder
-    .addViteApp("frontend", "./frontend")
-    .withReference(app)
-    .waitFor(app);
+// Frontend Next.js
+const nextjs = builder
+    .addExecutable("nextjs", "npm", "../../apps/frontend", ["run", "dev"])
+    .withEnvironment("PORT", "3000")
+    .withEnvironment("NEXT_PUBLIC_API_URL", "http://localhost:3001")
+    .withHttpEndpoint({ 
+        env: "PORT",
+        port: 3000,
+    })
+    .withExternalHttpEndpoints()
+    .waitFor(backend);
 
-// Bundle the frontend build output into the API container for publish/deploy.
-await app.publishWithContainerFiles(frontend, "./static");
+// Aguardar as promises
+await backend;
+await nextjs;
 
 await builder.build().run();
