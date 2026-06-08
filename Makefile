@@ -1,4 +1,4 @@
 .PHONY: run
 run:
-	@echo "🚀 Rodando Aquasmart Aspire AppHost..."
+	@echo "🚀 Running Chatnal Aspire AppHost..."
 	cd src/orchestration/aspire-app && aspire run

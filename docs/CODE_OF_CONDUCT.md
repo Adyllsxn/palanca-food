@@ -1,21 +1,20 @@
-# Código de Conduta - FlexShoe
+# Code of Conduct - Chatnal
 
-Este é um projeto open source. Espera-se que todos os participantes mantenham um ambiente respeitoso e colaborativo.
+This is an open source project. All participants are expected to maintain a respectful and collaborative environment.
 
-## Regras Básicas
+## Basic Rules
 
-- Respeite opiniões diferentes
-- Use linguagem profissional
-- Não compartilhe informações privadas sem permissão
-- Ajude colegas que estão aprendendo
+- Respect different opinions
+- Use professional language
+- Do not share private information without permission
+- Help colleagues who are learning
 
-## Reportar Problemas
+## Reporting Issues
 
-Se algo acontecer, entre em contato:
-- Email: domingos.nxscimento@gamil.com
+If you witness any violation, open an issue in the repository (marked as confidential) or contact the maintainers directly.
 
 ---
 
 <div align="center">
-  <h4>Projeto Open Source</h4>
+  <h4>Open Source Project</h4>
 </div>
