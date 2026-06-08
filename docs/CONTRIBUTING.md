@@ -1,22 +1,22 @@
-# Como Contribuir - FlexShoe
+# How to Contribute - Chatnal
 
-Contribuições são bem-vindas!
+Contributions are welcome!
 
-## 1. Faça um Fork
+## 1. Fork the Repository
 
-Clique no botão "Fork" no GitHub.
+Click the "Fork" button on GitHub.
 
-## 2. Clone e Crie uma Branch
+## 2. Clone and Create a Branch
 
 ```bash
-git clone https://github.com/Adyllsxn/flexshoe.git
-cd flexshoe
-git checkout -b minha-contribuicao
+git clone https://github.com/Adyllsxn/chatnal.git
+cd chatnal
+git checkout -b my-contribution
 ``` 
-## 3. Faça suas alterações e teste
-Execute o projeto localmente para testar.
+## 3. Make your changes and test
+Run the project locally to test.
 
-### 3.2 Execute com Aspire na raiz do projeto
+### 3.2 Run with Aspire in the project root
 ```bash
 aspire run
 ```
@@ -45,18 +45,18 @@ npm run start:dev
 ## 4. Commit e Push
 ```bash
 git add .
-git commit -m "descrição clara da sua alteração"
-git push origin minha-contribuicao
+git commit -m "clear description of your changes"
+git push origin my-contribution
 ```
 
-## 5. Abra um Pull Request
-Volte ao GitHub e abra um Pull Request explicando o que você fez.
+## 5. Open a Pull Request
+Go back to GitHub and open a Pull Request explaining what you did.
 
-## Dúvidas?
-Abra uma Issue.
+## Questions?
+Open an Issue.
 
 ---
 
 <div align="center">
-  <h4>Obrigado por contribuir! 👟</h4>
+  <h4>Thank you for contributing! 💬</h4>
 </div>

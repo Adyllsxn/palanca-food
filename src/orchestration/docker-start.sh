@@ -1,48 +1,46 @@
 #!/bin/bash
 
-# Cores para output
+# Colors for output
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 RED='\033[0;31m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
-echo -e "${BLUE}🚀 Iniciando FlexShoe com Docker...${NC}"
+echo -e "${BLUE}🚀 Starting Chatnal with Docker...${NC}"
 
-# Verificar se docker está instalado
+# Check if docker is installed
 if ! command -v docker &> /dev/null; then
-    echo -e "${RED}❌ Docker não está instalado${NC}"
+    echo -e "${RED}❌ Docker is not installed${NC}"
     exit 1
 fi
 
-# Verificar se docker-compose está instalado
+# Check if docker-compose is installed
 if ! command -v docker-compose &> /dev/null; then
-    echo -e "${RED}❌ Docker Compose não está instalado${NC}"
+    echo -e "${RED}❌ Docker Compose is not installed${NC}"
     exit 1
 fi
 
-# Construir e subir containers
-echo -e "${BLUE}📦 Construindo imagens...${NC}"
+# Build and start containers
+echo -e "${BLUE}📦 Building images...${NC}"
 docker-compose build
 
-echo -e "${BLUE}🐳 Subindo containers...${NC}"
+echo -e "${BLUE}🐳 Starting containers...${NC}"
 docker-compose up -d
 
-# Aguardar backend ficar pronto
-echo -e "${BLUE}⏳ Aguardando backend ficar pronto...${NC}"
+# Wait for backend to be ready
+echo -e "${BLUE}⏳ Waiting for backend to be ready...${NC}"
 sleep 10
 
-# Verificar status
-echo -e "${BLUE}📊 Status dos containers:${NC}"
+# Check status
+echo -e "${BLUE}📊 Container status:${NC}"
 docker-compose ps
 
-echo -e "${GREEN}✅ FlexShoe rodando!${NC}"
-echo -e "${GREEN}📍 Backend: http://localhost:3001${NC}"
+echo -e "${GREEN}✅ Chatnal is running!${NC}"
 echo -e "${GREEN}📍 Frontend: http://localhost:3000${NC}"
-echo -e "${GREEN}📍 Swagger: http://localhost:3001/api-docs${NC}"
+echo -e "${GREEN}📍 Backend: http://localhost:3001${NC}"
 echo -e "${GREEN}📍 PostgreSQL: localhost:5432${NC}"
 
-echo -e "\n${BLUE}Comandos úteis:${NC}"
-echo "  docker-compose logs -f     # Ver logs"
-echo "  docker-compose down        # Parar containers"
-echo "  docker-compose restart     # Reiniciar"
-echo "  docker-compose exec backend sh  # Acessar backend"
+echo -e "\n${BLUE}Commands:${NC}"
+echo "  docker-compose logs -f     # View logs"
+echo "  docker-compose down        # Stop containers"
+echo "  docker-compose restart     # Restart"

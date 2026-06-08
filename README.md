@@ -56,12 +56,12 @@
   <table>
     <tr>
       <td align="center" width="50%">
-        <img src="./docs/assets/client-demo.svg" alt="Chatnal Landing Page" width="90%" />
+        <img src="./docs/assets/page-demo.svg" alt="Chatnal Landing Page" width="90%" />
         <br />
         <b>Landing Page</b>
       </td>
       <td align="center" width="50%">
-        <img src="./docs/assets/admin-demo.svg" alt="Chatnal Chat Interface" width="90%" />
+        <img src="./docs/assets/chat-demo.svg" alt="Chatnal Chat Interface" width="90%" />
         <br />
         <b>Chat Interface</b>
       </td>
@@ -71,18 +71,17 @@
 
 ---
 
-## **⚠️ STATUS DO PROJETO**
-> **Nota:** Atualmente o frontend utiliza dados mockados. A integração com o backend será implementada em breve.
+## ⚠️ PROJECT STATUS
+> **Note:** Currently the frontend uses mocked data. Backend integration will be implemented soon.
 
 ---
 
-## **📄 LICENÇA**
+## 📄 LICENSE
 
-> Este projeto está sob a licença MIT, o que significa que é de código aberto e pode ser utilizado livremente para fins académicos e comerciais, desde que mantidos os créditos.
-
+> This project is under the MIT license, which means it is open source and can be freely used for academic and commercial purposes, as long as credits are maintained.
 
 ```markdown
-📚 Código aberto (open source)
-✅ Livre para uso académico
-🤝 Contribuições são bem-vindas
+📚 Open source
+✅ Free for academic use
+🤝 Contributions are welcome
 ```
