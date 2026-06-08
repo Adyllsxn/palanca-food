@@ -61,17 +61,8 @@
         <b>🎨 Loja (Cliente)</b>
         <br /><br />
         <b>🔗 Links:</b><br />
-        <a href="http://localhost:3000/">🌐 Local: http://localhost:3000/</a><br />
-        <a href="https://fl3xshoe.vercel.app">🚀 Remoto: https://fl3xshoe.vercel.app</a>
-      </td>
-      <td align="center" width="50%">
-        <img src="./docs/assets/admin-demo.svg" alt="Admin FlexShoe" width="90%" />
-        <br />
-        <b>⚙️ Painel Administrativo</b>
-        <br /><br />
-        <b>🔗 Links:</b><br />
-        <a href="http://localhost:3000/admin">🌐 Local: http://localhost:3000/admin</a><br />
-        <a href="https://fl3xshoe.vercel.app/admin">🚀 Remoto: https://fl3xshoe.vercel.app/admin</a>
+        <a href="http://localhost:5173/">🌐 Local: http://localhost:5173/</a><br />
+        <a href="https://chatnal.vercel.app/">🚀 Remoto: https://chatnal.vercel.app/</a>
       </td>
     </tr>
   </table>
