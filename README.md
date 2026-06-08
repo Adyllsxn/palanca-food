@@ -11,58 +11,59 @@
 
 ---
 
-## **📖 SOBRE O PROJETO**
+## 📖 ABOUT THE PROJECT
 
-> O **Chatnal** é uma plataforma de chat moderna que combina o melhor dos mundos: grupos públicos com sistema de aprovação e grupos privados com convites exclusivos. Inspirado no funcionamento do WhatsApp e Discord, o Chatnal oferece uma experiência completa de comunicação em tempo real.
+> **Chatnal** is a modern chat platform that combines the best of both worlds: public groups with an approval system and private groups with exclusive invites. Inspired by WhatsApp and Discord functionality, Chatnal offers a complete real-time communication experience.
 
-### **✨ Funcionalidades:**
+### ✨ Features:
 ```markdown
-✅ Grupos públicos com solicitação de entrada e aprovação por admin
-✅ Grupos privados com geração de convites únicos
-✅ Chat em tempo real com WebSockets (Socket.io / SignalR)
-✅ Autenticação segura com JWT
-✅ Interface responsiva (PC, tablet e smartphone)
-✅ Sistema de mensagens com persistência
-✅ Notificações em tempo real
-✅ Histórico de conversas
+✅ Public groups with join requests and admin approval
+✅ Private groups with unique invite link generation
+✅ Real-time chat with WebSockets (Socket.io / SignalR)
+✅ Secure authentication with JWT
+✅ Responsive interface (PC, tablet, and smartphone)
+✅ Persistent messaging system
+✅ Real-time notifications
+✅ Chat history
 ```
 
-### **🔧 Fluxo da Aplicação**
-> Usuário cria conta → Descobre grupos públicos ou é convidado → Solicita entrada ou aceita convite → Admin aprova → Chat em tempo real
+### **🔧 Application Flow**
+> User creates account → Discovers public groups or gets invited → Requests to join or accepts invite → Admin approves → Real-time chat starts
 
-### **📊 Tipos de Grupo**
+### 📊 Group Types
 
-| Tipo | Como funciona |
-|--------|-------------|
-| **Público com aprovação** | Aparece na lista geral → Usuário pede entrada → Admin aprova → Usuário vira membro |
-| **Privado com convite** | Não aparece na lista → Admin gera convite único → Usuário entra via link → Vira membro direto |
+| Type | How it works |
+|------|-------------|
+| **Public with approval** | Appears in the general list → User requests to join → Admin approves → User becomes a member |
+| **Private with invite** | Does not appear in the list → Admin generates unique invite → User joins via link → Becomes a member directly |
 
 ---
 
-## **🛠️ TECNOLOGIAS**
+## 🛠️ TECHNOLOGIES
 
-| Camada | Tecnologias |
-|--------|-------------|
+| Layer | Technologies |
+|-------|-------------|
 | **Backend** | NestJS, Node.js, Socket.io, Prisma, PostgreSQL, JWT |
-| **Frontend** | React, Nextjs, TailwindCSS, Zustand, Vite |
-| **Tempo Real** | WebSockets, Socket.io |
-| **Infra** | Docker, Git, GitHub Actions |
+| **Frontend** | React, Next.js, TailwindCSS, Zustand, Vite |
+| **Real-time** | WebSockets, Socket.io |
+| **Infrastructure** | Docker, Git, GitHub Actions |
 
 ---
 
 
-## **📸 DEMO**
+## 📸 DEMO
 <div align="center">
   <table>
     <tr>
       <td align="center" width="50%">
-        <img src="./docs/assets/client-demo.svg" alt="Frontend FlexShoe" width="90%" />
+        <img src="./docs/assets/client-demo.svg" alt="Chatnal Landing Page" width="90%" />
         <br />
-        <b>🎨 Loja (Cliente)</b>
-        <br /><br />
-        <b>🔗 Links:</b><br />
-        <a href="http://localhost:5173/">🌐 Local: http://localhost:5173/</a><br />
-        <a href="https://chatnal.vercel.app/">🚀 Remoto: https://chatnal.vercel.app/</a>
+        <b>Landing Page</b>
+      </td>
+      <td align="center" width="50%">
+        <img src="./docs/assets/admin-demo.svg" alt="Chatnal Chat Interface" width="90%" />
+        <br />
+        <b>Chat Interface</b>
       </td>
     </tr>
   </table>
