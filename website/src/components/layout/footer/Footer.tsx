@@ -1,14 +1,23 @@
 // components/layout/footer/Footer.tsx
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import {
   IoLogoFacebook,
   IoLogoTwitter,
   IoLogoInstagram,
-  IoLogoPinterest,
+  IoLogoWhatsapp,
+  IoLocationOutline,
+  IoCallOutline,
+  IoMailOutline,
+  IoTimeOutline,
 } from "react-icons/io5";
-import dados from "./footer.json";
+import { footerData } from "./footer";
 
 export function Footer() {
+  const [anoAtual] = useState(new Date().getFullYear());
+
   return (
     <footer className="footer">
       <div
@@ -18,28 +27,28 @@ export function Footer() {
         <div className="container">
           <div className="footer-brand">
             <a href="#" className="logo">
-              {dados.logo.nome}<span className="span">{dados.logo.ponto}</span>
+              {footerData.logo.nome}<span className="span">{footerData.logo.ponto}</span>
             </a>
-            <p className="footer-text">{dados.descricao}</p>
+            <p className="footer-text">{footerData.descricao}</p>
             <ul className="social-list">
               <li>
-                <a href="#" className="social-link">
+                <a href="#" className="social-link" aria-label="Facebook">
                   <IoLogoFacebook size={20} />
                 </a>
               </li>
               <li>
-                <a href="#" className="social-link">
+                <a href="#" className="social-link" aria-label="Twitter">
                   <IoLogoTwitter size={20} />
                 </a>
               </li>
               <li>
-                <a href="#" className="social-link">
+                <a href="#" className="social-link" aria-label="Instagram">
                   <IoLogoInstagram size={20} />
                 </a>
               </li>
               <li>
-                <a href="#" className="social-link">
-                  <IoLogoPinterest size={20} />
+                <a href="#" className="social-link" aria-label="WhatsApp">
+                  <IoLogoWhatsapp size={20} />
                 </a>
               </li>
             </ul>
@@ -47,51 +56,55 @@ export function Footer() {
 
           <ul className="footer-list">
             <li>
-              <p className="footer-list-title">{dados.contato.titulo}</p>
+              <p className="footer-list-title">{footerData.contato.titulo}</p>
             </li>
-            <li>
-              <p className="footer-list-item">{dados.contato.telefone}</p>
+            <li className="footer-list-item">
+              <IoCallOutline size={16} />
+              <span>{footerData.contato.telefone}</span>
             </li>
-            <li>
-              <p className="footer-list-item">{dados.contato.email}</p>
+            <li className="footer-list-item">
+              <IoMailOutline size={16} />
+              <span>{footerData.contato.email}</span>
             </li>
-            <li>
-              <address className="footer-list-item">{dados.contato.endereco}</address>
+            <li className="footer-list-item">
+              <IoLocationOutline size={16} />
+              <address>{footerData.contato.endereco}</address>
             </li>
           </ul>
 
           <ul className="footer-list">
             <li>
-              <p className="footer-list-title">{dados.horario.titulo}</p>
+              <p className="footer-list-title">{footerData.horario.titulo}</p>
             </li>
-            {dados.horario.itens.map((item, index) => (
-              <li key={index}>
-                <p className="footer-list-item">{item}</p>
+            {footerData.horario.itens.map((item, index) => (
+              <li key={index} className="footer-list-item">
+                <IoTimeOutline size={16} />
+                <span>{item}</span>
               </li>
             ))}
           </ul>
 
-          <form action="" className="footer-form">
-            <p className="footer-list-title">{dados.formulario.titulo}</p>
+          <form action="" className="footer-form" onSubmit={(e) => e.preventDefault()}>
+            <p className="footer-list-title">{footerData.formulario.titulo}</p>
             <div className="input-wrapper">
               <input
                 type="text"
                 name="full_name"
                 required
-                placeholder={dados.formulario.nome}
+                placeholder={footerData.formulario.nome}
                 className="input-field"
               />
               <input
                 type="email"
                 name="email_address"
                 required
-                placeholder={dados.formulario.email}
+                placeholder={footerData.formulario.email}
                 className="input-field"
               />
             </div>
             <div className="input-wrapper">
               <select name="total_person" className="input-field">
-                {dados.formulario.pessoas.map((pessoa, index) => (
+                {footerData.formulario.pessoas.map((pessoa, index) => (
                   <option key={index} value={pessoa}>
                     {pessoa}
                   </option>
@@ -106,11 +119,11 @@ export function Footer() {
             <textarea
               name="message"
               required
-              placeholder={dados.formulario.mensagem}
+              placeholder={footerData.formulario.mensagem}
               className="input-field"
             ></textarea>
             <button type="submit" className="btn">
-              {dados.formulario.botao}
+              {footerData.formulario.botao}
             </button>
           </form>
         </div>
@@ -118,11 +131,11 @@ export function Footer() {
       <div className="footer-bottom">
         <div className="container">
           <p className="copyright-text">
-            {dados.copyright.texto}{" "}
+            {footerData.copyright.texto} {anoAtual}{" "}
             <a href="#" className="copyright-link">
-              {dados.copyright.link}
+              {footerData.copyright.link}
             </a>{" "}
-            {dados.copyright.direitos}
+            {footerData.copyright.direitos}
           </p>
         </div>
       </div>
