@@ -1,0 +1,27 @@
+// components/sections/About/about.ts
+
+export interface AboutItem {
+  id: number;
+  texto: string;
+}
+
+export interface AboutData {
+  titulo: string;
+  destaque: string;
+  texto: string;
+  itens: AboutItem[];
+  botao: string;
+}
+
+export const aboutData: AboutData = {
+  titulo: "Cafeteria, Hambúrgueres e as Melhores Pizzas",
+  destaque: "da Cidade!",
+  texto: "Os restaurantes em Hangzhou também atendiam muitos chineses do norte que fugiram de Kaifeng durante a invasão Jurchen da década de 1120, e também é sabido que muitos restaurantes eram administrados por famílias.",
+  itens: [
+    { id: 1, texto: "Comidas Deliciosas e Saudáveis" },
+    { id: 2, texto: "Área Especial para Família e Crianças" },
+    { id: 3, texto: "Música e Outras Facilidades" },
+    { id: 4, texto: "Entrega de Comida Mais Rápida" }
+  ],
+  botao: "Pedir Agora"
+};

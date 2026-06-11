@@ -1,23 +1,29 @@
 // components/sections/Blog/Blog.tsx
 import Image from "next/image";
 import { IoCalendarOutline, IoPersonOutline, IoArrowForward } from "react-icons/io5";
-import dados from "./blog.json";
+import { blogData } from "./blog";
 
 export function Blog() {
   return (
     <section className="section section-divider white blog" id="blog">
       <div className="container">
-        <p className="section-subtitle">{dados.subtitulo}</p>
+        <p className="section-subtitle">{blogData.subtitulo}</p>
         <h2 className="h2 section-title">
           Isto é Tudo Sobre <span className="span">Comidas</span>
         </h2>
-        <p className="section-text">{dados.texto}</p>
+        <p className="section-text">{blogData.texto}</p>
         <ul className="blog-list">
-          {dados.posts.map((post) => (
+          {blogData.posts.map((post) => (
             <li key={post.id}>
               <div className="blog-card">
                 <div className="card-banner">
-                  <Image src={post.imagem} width={600} height={390} alt={post.titulo} className="w-100" />
+                  <Image 
+                    src={post.imagem} 
+                    width={600} 
+                    height={390} 
+                    alt={post.titulo} 
+                    className="w-100" 
+                  />
                   <div className="badge">{post.categoria}</div>
                 </div>
                 <div className="card-content">
