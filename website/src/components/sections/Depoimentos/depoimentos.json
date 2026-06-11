@@ -1,0 +1,28 @@
+
+{
+  "subtitulo": "Depoimentos",
+  "texto": "Comida é qualquer substância consumida para fornecer suporte nutricional a um organismo.",
+  "itens": [
+    {
+      "id": 1,
+      "nome": "Roberto William",
+      "cargo": "CEO Kingfisher",
+      "avatar": "/assets/images/avatar-1.jpg",
+      "depoimento": "Eu estaria perdido sem o restaurante. Gostaria de agradecer pessoalmente pelo seu produto excepcional."
+    },
+    {
+      "id": 2,
+      "nome": "Thomas José",
+      "cargo": "CEO Getforce",
+      "avatar": "/assets/images/avatar-2.jpg",
+      "depoimento": "Eu estaria perdido sem o restaurante. Gostaria de agradecer pessoalmente pelo seu produto excepcional."
+    },
+    {
+      "id": 3,
+      "nome": "Carlos Ricardo",
+      "cargo": "CEO Angela",
+      "avatar": "/assets/images/avatar-3.jpg",
+      "depoimento": "Eu estaria perdido sem o restaurante. Gostaria de agradecer pessoalmente pelo seu produto excepcional."
+    }
+  ]
+}

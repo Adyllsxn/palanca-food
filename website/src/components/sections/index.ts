@@ -1,0 +1,9 @@
+export { About } from './About/About';
+export { Banner } from './Banner/Banner';
+export { Blog } from './Blog/Blog';
+export { Cta } from './Cta/Cta';
+export { Delivery } from './Delivery/Delivery';
+export { Depoimentos } from './Depoimentos/Depoimentos';
+export { FoodMenu } from './FoodMenu/FoodMenu';
+export { Hero } from './Hero/Hero';
+export { Promo } from './Promo/Promo';
