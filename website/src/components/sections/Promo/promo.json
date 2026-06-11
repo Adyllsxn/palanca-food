@@ -1,0 +1,34 @@
+{
+  "itens": [
+    {
+      "id": 1,
+      "titulo": "Pizza Mexicana",
+      "descricao": "Comida é qualquer substância consumida para fornecer suporte nutricional a um organismo.",
+      "imagem": "/assets/images/promo-1.png"
+    },
+    {
+      "id": 2,
+      "titulo": "Refrigerantes",
+      "descricao": "Comida é qualquer substância consumida para fornecer suporte nutricional a um organismo.",
+      "imagem": "/assets/images/promo-2.png"
+    },
+    {
+      "id": 3,
+      "titulo": "Batata Frita",
+      "descricao": "Comida é qualquer substância consumida para fornecer suporte nutricional a um organismo.",
+      "imagem": "/assets/images/promo-3.png"
+    },
+    {
+      "id": 4,
+      "titulo": "Burger Kingo",
+      "descricao": "Comida é qualquer substância consumida para fornecer suporte nutricional a um organismo.",
+      "imagem": "/assets/images/promo-4.png"
+    },
+    {
+      "id": 5,
+      "titulo": "Frango Masala",
+      "descricao": "Comida é qualquer substância consumida para fornecer suporte nutricional a um organismo.",
+      "imagem": "/assets/images/promo-5.png"
+    }
+  ]
+}

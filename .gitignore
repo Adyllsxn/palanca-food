@@ -59,10 +59,9 @@ coverage/
 debug/
 
 # Snippets (atalhos do VS Code)
-docs/javascript-snippets.md
-docs/typescript-snippets.md
+assets/javascript-snippets.md
+assets/typescript-snippets.md
 
 
-src/apps/backend/node_modules
-src/apps/frontend/node_modules
-src/orchestration/aspire-app/node_modules
+
+website/node_modules

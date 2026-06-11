@@ -1,0 +1,67 @@
+
+{
+  "subtitulo": "Pratos Populares",
+  "texto": "Comida é qualquer substância consumida para fornecer suporte nutricional a um organismo.",
+  "itens": [
+    {
+      "id": 1,
+      "imagem": "/assets/images/food-menu-1.png",
+      "titulo": "Frango Frito Ilimitado",
+      "desconto": "-15%",
+      "categoria": "Frango",
+      "preco": 4850,
+      "precoOriginal": 5700,
+      "filtro": "Frango"
+    },
+    {
+      "id": 2,
+      "imagem": "/assets/images/food-menu-2.png",
+      "titulo": "Burger King Whopper",
+      "desconto": "-10%",
+      "categoria": "Hambúrguer",
+      "preco": 2850,
+      "precoOriginal": 3150,
+      "filtro": "Hambúrguer"
+    },
+    {
+      "id": 3,
+      "imagem": "/assets/images/food-menu-3.png",
+      "titulo": "White Castle Pizzas",
+      "desconto": "-25%",
+      "categoria": "Pizza",
+      "preco": 5200,
+      "precoOriginal": 6950,
+      "filtro": "Pizza"
+    },
+    {
+      "id": 4,
+      "imagem": "/assets/images/food-menu-4.png",
+      "titulo": "Bell Burrito Supreme",
+      "desconto": "-20%",
+      "categoria": "Burrito",
+      "preco": 4250,
+      "precoOriginal": 5300,
+      "filtro": "Sanduíche"
+    },
+    {
+      "id": 5,
+      "imagem": "/assets/images/food-menu-5.png",
+      "titulo": "Kung Pao Chicken BBQ",
+      "desconto": "-5%",
+      "categoria": "Frango",
+      "preco": 6350,
+      "precoOriginal": 6680,
+      "filtro": "Frango"
+    },
+    {
+      "id": 6,
+      "imagem": "/assets/images/food-menu-6.png",
+      "titulo": "Frango do Wendy's",
+      "desconto": "-15%",
+      "categoria": "Frango",
+      "preco": 4850,
+      "precoOriginal": 5700,
+      "filtro": "Frango"
+    }
+  ]
+}
