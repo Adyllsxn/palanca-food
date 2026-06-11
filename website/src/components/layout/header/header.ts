@@ -20,7 +20,7 @@ export interface HeaderData {
 
 export const headerData: HeaderData = {
   logo: {
-    nome: "Foodie",
+    nome: "PalancaFood",
     ponto: "."
   },
   menu: [
