@@ -57,19 +57,24 @@ Antes de começar, certifique-se de ter atendido aos seguintes requisitos:
 
 ### Executar Localmente
 
-Para executar o **Foodie** localmente, execute este comando no seu git bash:
-
-Linux and macOS:
+Para executar o **PalancaFood** localmente, execute este comando no seu git bash:
 
 ```bash
-sudo git clone https://github.com/Adyllsxn/palanca-food.git
-```
-
-Windows:
-
-```bash
+# Clone o repositório
 git clone https://github.com/Adyllsxn/palanca-food.git
-``` 
+
+# Entre na pasta
+cd palanca-food/website
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev
+```
+> Local http://localhost:3000 
+
+> Remoto https://palanca-food.vercel.app/
 
 ---
 
