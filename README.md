@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./public/assets/images/hero-banner.png" alt="Foodie Logo" width="40%" /> 
+  <img src="./assets/logo.svg" alt="Foodie Logo" width="30%" /> 
   </br> </br>
   
   [![GitHub](https://img.shields.io/badge/github-palancafood-181717?style=for-the-badge&logo=github)](https://github.com/Adyllsxn/palanca-food)
@@ -45,7 +45,7 @@
 
 
 ## 📸 DEMO
-<div align="center"> <img src="./docs/assets/demo.svg" alt="KwanzaSmart Dashboard" width="65%" /> <br /> <i>Interface principal com gráficos de temperatura, pH e alertas em tempo real</i> </div>
+<div align="center"> <img src="./assets/demo.svg" alt="PalancaFood Landing Page" width="65%" /> <br /> <i>Interface principal</i> </div>
 
 ---
 
@@ -62,7 +62,7 @@ Para executar o **Foodie** localmente, execute este comando no seu git bash:
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/Adyllsxb/palanca-food.git
+sudo git clone https://github.com/Adyllsxn/palanca-food.git
 ```
 
 Windows:
