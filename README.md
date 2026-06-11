@@ -73,6 +73,12 @@ git clone https://github.com/Adyllsxn/palanca-food.git
 
 ---
 
+## 📌 CRÉDITOS
+
+Inspirado no projeto [Foodie](https://github.com/codewithsadee/foodie) de [codewithsadee](https://github.com/codewithsadee)
+
+---
+
 ## 📄 LICENSE
 
 > Este projeto está sob a licença **MIT**. Isso significa que você pode usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do software, desde que mantenha o aviso de copyright original.
