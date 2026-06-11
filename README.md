@@ -2,9 +2,8 @@
   <img src="./public/assets/images/hero-banner.png" alt="Foodie Logo" width="40%" /> 
   </br> </br>
   
-  [![GitHub](https://img.shields.io/badge/github-foodie-181717?style=for-the-badge&logo=github)](https://github.com/Adyllsxn/foodie)
-  [![Demo](https://img.shields.io/badge/demo-em_breve-4c1?style=for-the-badge&logo=vercel&logoColor=white)](https://foodie.vercel.app)
-  [![Setup](https://img.shields.io/badge/setup-guide-239120?style=for-the-badge&logo=gitbook&logoColor=white)](docs/Setup.md)
+  [![GitHub](https://img.shields.io/badge/github-palancafood-181717?style=for-the-badge&logo=github)](https://github.com/Adyllsxn/palanca-food)
+  [![Demo](https://img.shields.io/badge/demo-online-4c1?style=for-the-badge&logo=vercel&logoColor=white)](https://palanca-food.vercel.app)
   [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 
 </div>
@@ -13,7 +12,7 @@
 
 ## 📖 SOBRE O PROJETO
 
-> **Foodie Angola** é uma landing page desenvolvida para um restaurante especializado em hambúrgueres artesanais localizado em Luanda. O projeto tem como objetivo apresentar o cardápio digital, facilitar reservas e divulgar promoções do estabelecimento de forma atrativa e moderna.
+> **PalancaFood** é uma landing page desenvolvida para um restaurante especializado em hambúrgueres artesanais localizado em Luanda. O projeto tem como objetivo apresentar o cardápio digital, facilitar reservas e divulgar promoções do estabelecimento de forma atrativa e moderna.
 
 ### ✨ Funcionalidades:
 ```markdown
@@ -63,17 +62,17 @@ Para executar o **Foodie** localmente, execute este comando no seu git bash:
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/foodie.git
+sudo git clone https://github.com/Adyllsxb/palanca-food.git
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/codewithsadee/foodie.git
+git clone https://github.com/Adyllsxn/palanca-food.git
 ``` 
 
 ---
 
 ## 📄 LICENSE
 
-> Este projeto é **livre para uso** e não contém nenhuma licença.
+> Este projeto está sob a licença **MIT**. Isso significa que você pode usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do software, desde que mantenha o aviso de copyright original.

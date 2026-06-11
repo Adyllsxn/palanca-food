@@ -33,14 +33,14 @@ export interface FooterData {
 
 export const footerData: FooterData = {
   logo: {
-    nome: "Foodie",
+    nome: "PalancaFood",
     ponto: "."
   },
   descricao: "O melhor hambúrguer de Luanda! Sabor, qualidade e tradição que trazem a verdadeira experiência gastronômica para você e sua família.",
   contato: {
     titulo: "Informações de Contato",
     telefone: "+244 923 456 789",
-    email: "contato@foodie.ao",
+    email: "contato@palancafood.ao",
     endereco: "Rua Rainha Ginga, 123, Talatona, Luanda/Angola"
   },
   horario: {
@@ -61,7 +61,7 @@ export const footerData: FooterData = {
   },
   copyright: {
     texto: "©",
-    link: "Foodie",
+    link: "PalancaFood",
     direitos: "Todos os direitos reservados."
   }
 };
