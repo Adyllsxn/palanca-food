@@ -3,7 +3,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { IoSearchOutline } from "react-icons/io5";
-import dados from "./header.json";
+import { headerData } from "./header";
 
 export function Header() {
   const [isHeaderActive, setIsHeaderActive] = useState(false);
@@ -38,13 +38,13 @@ export function Header() {
         <div className="container">
           <h1>
             <a href="#" className="logo">
-              {dados.logo.nome}<span className="span">{dados.logo.ponto}</span>
+              {headerData.logo.nome}<span className="span">{headerData.logo.ponto}</span>
             </a>
           </h1>
 
           <nav className={`navbar ${isNavbarActive ? "active" : ""}`}>
             <ul className="navbar-list">
-              {dados.menu.map((item) => (
+              {headerData.menu.map((item) => (
                 <li key={item.id} className="nav-item">
                   <a href={item.link} className="navbar-link" onClick={handleNavLinkClick}>
                     {item.nome}
@@ -58,7 +58,7 @@ export function Header() {
             <button className="search-btn" aria-label="Buscar" onClick={handleSearchToggle}>
               <IoSearchOutline size={20} />
             </button>
-            <button className="btn btn-hover">{dados.botaoReserva}</button>
+            <button className="btn btn-hover">{headerData.botaoReserva}</button>
             <button
               className={`nav-toggle-btn ${isNavbarActive ? "active" : ""}`}
               aria-label="Menu"
@@ -79,7 +79,7 @@ export function Header() {
             type="search"
             name="search"
             aria-label="Pesquisar"
-            placeholder={dados.search.placeholder}
+            placeholder={headerData.search.placeholder}
             className="search-input"
           />
           <button className="search-submit" aria-label="Enviar busca">
