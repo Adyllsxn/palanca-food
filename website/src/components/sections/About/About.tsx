@@ -1,7 +1,7 @@
 // components/sections/About/About.tsx
 import Image from "next/image";
 import { IoCheckmarkOutline } from "react-icons/io5";
-import dados from "./about.json";
+import { aboutData } from "./about";
 
 export function About() {
   return (
@@ -25,18 +25,18 @@ export function About() {
         </div>
         <div className="about-content">
           <h2 className="h2 section-title">
-            {dados.titulo} <span className="span">{dados.destaque}</span>
+            {aboutData.titulo} <span className="span">{aboutData.destaque}</span>
           </h2>
-          <p className="section-text">{dados.texto}</p>
+          <p className="section-text">{aboutData.texto}</p>
           <ul className="about-list">
-            {dados.itens.map((item) => (
+            {aboutData.itens.map((item) => (
               <li key={item.id} className="about-item">
                 <IoCheckmarkOutline size={16} />
                 <span className="span">{item.texto}</span>
               </li>
             ))}
           </ul>
-          <button className="btn btn-hover">{dados.botao}</button>
+          <button className="btn btn-hover">{aboutData.botao}</button>
         </div>
       </div>
     </section>
